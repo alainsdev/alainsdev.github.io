@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://i.ibb.co/R02hNDp/mack-new-logo.png" type="image/png">
+    <meta property="og:title" content="About Me - Alain">
+    <meta property="og:url" content="https://testroom.000.pe/portfolio/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Platypi:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <title>About Me - Alain</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Platypi", serif;
+            background-color: #1e1e1e;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Background Animation */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, transparent 30%, #007bff 70%);
+            opacity: 0.5;
+            z-index: -1;
+            animation: neonGlow 2s infinite alternate;
+        }
+
+        @keyframes neonGlow {
+            from {
+                opacity: 0.2;
+            }
+            to {
+                opacity: 0.5;
+            }
+        }
+
+        .container {
+            background-color: rgba(51, 51, 51, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            width: 90%;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Header Styles */
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Description Styles */
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #cccccc;
+            margin-bottom: 15px; 
+        }
+
+        /* Button Styles */
+        .buttons {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333333; 
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            text-decoration: none;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+            box-shadow: 0 0 10px #007bff, 0 0 20px #007bff;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>About Me</h1>
+        <p>Hello, I'm Alain. I'm 15 years old. I love creating Discord bots and websites.</p>
+
+        <h1>Skills</h1>
+        <p>HTML, CSS, JavaScript, Discord.js, Express, and PHP.</p>
+
+        <h1>Projects</h1>
+        <p>I currently have one bot project completed, which is Mack. You can find more information about it below.</p>
+
+        <h1>Plans</h1>
+        <p>I'm planning to learn the Roblox API to create innovative Discord bots integrating with it.</p>
+
+        <h1>Links</h1>
+        <div class="buttons">
+            <a class="button" href="https://discord.gg/yUNF6Pvpru" target="_blank">Mack Discord Server</a>
+            <a class="button" href="https://discord.com/api/oauth2/authorize?client_id=1123623678555455489&permissions=8&scope=bot%20applications.commands" target="_blank">Invite Mack</a>
+        </div>
+    </div>
+</body>
+</html>
