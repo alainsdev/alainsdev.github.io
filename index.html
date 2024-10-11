@@ -3,13 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="https://i.ibb.co/R02hNDp/mack-new-logo.png" type="image/png">
-    <meta property="og:title" content="About Me - Alain">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Platypi:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <title>Alain</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title>About Me - Alain</title>
     <style>
         * {
             margin: 0;
@@ -18,139 +13,207 @@
         }
 
         body {
-            font-family: "Platypi", serif;
-            background-color: #1e1e1e;
+            font-family: 'Poppins', sans-serif;
+            background-color: #181818;
             color: #ffffff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
-        }
-
-        /* Background Animation */
-        body::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle, transparent 30%, #007bff 70%);
-            opacity: 0.5;
-            z-index: -1;
-            animation: neonGlow 2s infinite alternate;
-        }
-
-        @keyframes neonGlow {
-            from {
-                opacity: 0.2;
-            }
-            to {
-                opacity: 0.5;
-            }
+            line-height: 1.6;
+            overflow-x: hidden;
         }
 
         .container {
-            background-color: rgba(51, 51, 51, 0.8);
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-            max-width: 600px;
-            width: 100%;
-            animation: fadeIn 1s ease-in-out;
-            position: relative;
-            z-index: 1;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 60px;
         }
 
-        /* Header Styles */
-        h1 {
-            font-size: 24px;
-            margin-bottom: 10px;
-            color: #ffffff;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            text-align: center; /* Center the text */
+        header {
+            text-align: center;
+            padding: 20px 0;
+            margin-bottom: 60px;
         }
 
-        /* Description Styles */
-        p {
-            font-size: 16px;
-            line-height: 1.5;
-            color: #cccccc;
-            margin-bottom: 15px; 
-            text-align: center; /* Center the text */
+        header h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: #1e90ff;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+            animation-delay: 0.5s;
         }
 
-        /* Skills Styles */
+        header p {
+            font-size: 1.2rem;
+            color: #bbbbbb;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+            animation-delay: 1s;
+        }
+
+        .section {
+            margin: 80px 0;
+        }
+
+        .section h2 {
+            font-size: 2.8rem;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #1e90ff;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+            animation-delay: 1.5s;
+        }
+
         .skills {
             display: flex;
-            justify-content: center;
+            justify-content: space-around;
             flex-wrap: wrap;
-            margin-top: 20px;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+            animation-delay: 2s;
         }
 
         .skill {
-            display: flex;
-            align-items: center;
-            margin: 10px;
-            font-size: 18px;
-            color: #ffffff;
-            text-shadow: 0 0 5px #007bff, 0 0 10px #007bff; /* Glow effect */
-            transition: text-shadow 0.3s ease;
+            background: #232323;
+            padding: 30px;
+            margin: 20px;
+            border-radius: 15px;
+            width: 250px;
+            text-align: center;
+            transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+            opacity: 0;
         }
 
         .skill:hover {
-            text-shadow: 0 0 10px #007bff, 0 0 20px #007bff; /* Enhanced glow effect on hover */
+            transform: translateY(-10px);
+            background: #1e90ff;
+            color: white;
+            box-shadow: 0px 15px 30px rgba(30, 144, 255, 0.5);
         }
 
-        /* Animations */
+        .skill h3 {
+            margin-bottom: 10px;
+            font-size: 1.6rem;
+            transition: color 0.3s;
+        }
+
+        .skill p {
+            font-size: 1rem;
+            color: #cccccc;
+        }
+
+        .past-projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 40px;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+            animation-delay: 2.5s;
+        }
+
+        .project {
+            background: #232323;
+            padding: 25px;
+            border-radius: 15px;
+            transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .project:hover {
+            transform: translateY(-10px);
+            background: #1e90ff;
+            color: white;
+            box-shadow: 0px 15px 30px rgba(30, 144, 255, 0.5);
+        }
+
+        .project h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .project p {
+            color: #bbbbbb;
+            margin-bottom: 20px;
+        }
+
+        .project img,
+        .project iframe {
+            width: 100%;
+            border-radius: 12px;
+            transition: all 0.4s ease;
+        }
+
+        .project img:hover,
+        .project iframe:hover {
+            transform: scale(1.05);
+        }
+
         @keyframes fadeIn {
             from {
                 opacity: 0;
-                transform: translateY(-20px);
+                transform: translateY(20px);
             }
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
-
-        /* Media Queries for Responsiveness */
-        @media (max-width: 600px) {
-            .container {
-                padding: 15px;
-            }
-
-            h1 {
-                font-size: 20px;
-            }
-
-            p {
-                font-size: 14px;
-            }
-
-            .skill {
-                font-size: 12px;
-            }
-        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>About Me</h1>
-        <p>Hello, I'm Alain. I create discord bots and APIs.</p>
 
-        <h1>Skills</h1>
-        <div class="skills">
-            <div class="skill"><i class="fab fa-node-js"></i> Node.js</div>
-            <div class="skill"><i class="fab fa-discord"></i> Discord.js</div>
-            <div class="skill"><i class="fas fa-server"></i> Express.js</div>
-            <div class="skill"><i class="fas fa-database"></i> MongoDB</div>
+    <div class="container">
+        <header>
+            <h1>Hello! I'm Alain</h1>
+            <p>Hello! I have been coding for over a year, I specialize in developing Discord bots and APIs. I will be using JavaScript with Node.js (JavaScript Runtime Environment). If you're interested in collaborating or have any questions, feel free to reach out to me on Discord!</p>
+        </header>
+
+        <div class="section" id="skills">
+            <h2>Skills</h2>
+            <div class="skills">
+                <div class="skill">
+                    <h3><i class="fab fa-node-js"></i> Node.js</h3>
+                    <p>Main Javascript Runtime Environment.</p>
+                </div>
+                <div class="skill">
+                    <h3><i class="fab fa-discord"></i> Discord.js</h3>
+                    <p>Creating Discord Bots.</p>
+                </div>
+                <div class="skill">
+                    <h3><i class="fab fa-node-js"></i> Express.js</h3>
+                    <p>Website Backends and API's.</p>
+                </div>
+                <div class="skill">
+                    <h3><i class="fas fa-database"></i> MongoDB</h3>
+                    <p>For saving data used for both backend and discord.</p>
+                </div>
+            </div>
         </div>
 
-        <h1>Projects</h1>
-        <p>I currently dont have any public projects.</p>
+        <div class="section" id="work">
+            <h2>Past Projects</h2>
+            <div class="past-projects">
+                <div class="project">
+                    <h3>Basic API</h3>
+                    <p>A basic food menu made using express.js.</p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/yGMM_r30W2Q?si=UKTUlylFDmHq0rzl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <script>
+        window.onload = function() {
+            const skills = document.querySelectorAll('.skill');
+            skills.forEach((skill, index) => {
+                setTimeout(() => {
+                    skill.style.opacity = 1;
+                    skill.style.animation = 'fadeIn 1s forwards';
+                }, index * 400);
+            });
+        };
+    </script>
+
 </body>
 </html>
