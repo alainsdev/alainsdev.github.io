@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alain</title>
+    <title>Alain Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * {
@@ -191,7 +191,7 @@
             </div>
         </div>
 
-        <div class="section" id="work">
+        <div class="section" id="past-projects">
             <h2>Past Projects</h2>
             <div class="past-projects">
                 <div class="project">
@@ -212,6 +212,11 @@
                     skill.style.animation = 'fadeIn 1s forwards';
                 }, index * 400);
             });
+
+            if (window.location.hash === '#past-projects') {
+                const pastProjectsSection = document.getElementById('past-projects');
+                pastProjectsSection.scrollIntoView({ behavior: 'smooth' });
+            }
         };
     </script>
 
