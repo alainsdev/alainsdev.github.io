@@ -69,7 +69,7 @@
             justify-content: space-around;
             flex-wrap: wrap;
             opacity: 0;
-            animation: fadeIn 1s forwards;
+            animation: fadeInSkills 1s forwards;
             animation-delay: 2s;
         }
 
@@ -82,7 +82,6 @@
             text-align: center;
             transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
             box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
-            opacity: 0;
         }
 
         .skill:hover {
@@ -149,7 +148,58 @@
             transform: scale(1.05);
         }
 
+        .reviews {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 40px;
+            justify-content: center;
+            margin-top: 60px;
+        }
+
+        .review {
+            background: #232323;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+        }
+
+        .review:hover {
+            transform: translateY(-10px);
+            background: #1e90ff;
+            color: white;
+            box-shadow: 0px 15px 30px rgba(30, 144, 255, 0.5);
+        }
+
+        .review:hover h4 {
+            color: white;
+        }
+
+        .review h4 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: #1e90ff;
+            transition: color 0.3s;
+        }
+
+        .review p {
+            color: #bbbbbb;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
         @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInSkills {
             from {
                 opacity: 0;
                 transform: translateY(20px);
@@ -173,8 +223,8 @@
             <h2>Skills</h2>
             <div class="skills">
                 <div class="skill">
-                    <h3><i class="fab fa-node-js"></i> Node.js</h3>
-                    <p>Main Javascript Runtime Environment.</p>
+                    <h3><i class="fas fa-gamepad"></i> Noblox.js</h3>
+                    <p>For creating roblox bots.</p>
                 </div>
                 <div class="skill">
                     <h3><i class="fab fa-discord"></i> Discord.js</h3>
@@ -199,26 +249,22 @@
                     <p>A basic food menu made using express.js.</p>
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/yGMM_r30W2Q?si=UKTUlylFDmHq0rzl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
+                <div class="project">
+                    <h3>Discord-Roblox Bot</h3>
+                    <p>Bot that kicks from roblox groups and bans from discord servers.</p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/2lo26YnHfOA?si=BddVejfiLcBU4UUP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
             </div>
         </div>
+
+        
     </div>
 
     <script>
-        window.onload = function() {
-            const skills = document.querySelectorAll('.skill');
-            skills.forEach((skill, index) => {
-                setTimeout(() => {
-                    skill.style.opacity = 1;
-                    skill.style.animation = 'fadeIn 1s forwards';
-                }, index * 400);
-            });
-
-            if (window.location.hash === '#past-projects') {
-                const pastProjectsSection = document.getElementById('past-projects');
-                pastProjectsSection.scrollIntoView({ behavior: 'smooth' });
-            }
-        };
+        if (window.location.hash === '#past-projects') {
+            const pastProjectsSection = document.getElementById('past-projects');
+            pastProjectsSection.scrollIntoView({ behavior: 'smooth' });
+        }
     </script>
-
 </body>
 </html>
